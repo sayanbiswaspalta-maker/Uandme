@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You ❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff5f6d, #ffc371);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      text-align: center;
+      width: 90%;
+      max-width: 350px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      color: #ff3e6c;
+    }
+
+    p {
+      color: #555;
+    }
+
+    .btns {
+      margin-top: 20px;
+      position: relative;
+      height: 80px;
+    }
+
+    button {
+      padding: 12px 20px;
+      margin: 8px;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #yes {
+      background: #ff3e6c;
+      color: white;
+    }
+
+    #no {
+      background: #ddd;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>Will you be my Valentine? 💖</h1>
+    <p>You make my life beautiful.</p>
+
+    <div class="btns">
+      <button id="yes">Yes 😍</button>
+      <button id="no">No 🙈</button>
+    </div>
+  </div>
+
+  <script>
+    const yesBtn = document.getElementById("yes");
+    const noBtn = document.getElementById("no");
+
+    noBtn.addEventListener("click", () => {
+      noBtn.style.left = Math.random() * 60 + "%";
+      noBtn.style.top = Math.random() * 40 + "px";
+    });
+
+    yesBtn.addEventListener("click", () => {
+      document.body.innerHTML = `
+        <h1 style="color:white;text-align:center;">
+          Yayyy! 💖<br>
+          Happy Valentine’s Day ❤️
+        </h1>
+      `;
+    });
+  </script>
+
+</body>
+</html>
